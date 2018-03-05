@@ -37,12 +37,14 @@ def test_capture(st):
     sys.stdout = sys.__stdout__
     return capturedOutput.getvalue()
 
+
 # Test cases
 t1 = "ag.display_properties()"
 t2 = "ag.display_rent_less(1000)"
 t3 = "ag.display_price_less(1000)"
 t4 = "ag.display_price_less(20000)"
 
+# Cannot make line shorter due to dark magic of python multiline strings
 r1 = 'PROPERTY DETAILS\n================\nsquare footage: 20sq\nbedrooms: 20b\nbathrooms: 20ba\n\nHOUSE DETAILS\n# of stories: 20\ngarage: none\nfenced yard: yes\nRENTAL DETAILS\nrent: 200\nestimated utilities: 20\nfurnished: no\nPROPERTY DETAILS\n================\nsquare footage: 200\nbedrooms: 1\nbathrooms: 20\n\nHOUSE DETAILS\n# of stories: 20\ngarage: none\nfenced yard: no\nPURCHASE DETAILS\nselling price: 10\nestimated taxes: 20\nPROPERTY DETAILS\n================\nsquare footage: 20\nbedrooms: 10\nbathrooms: 20\n\nAPARTMENT DETAILS\nlaundry: coin\nhas balcony : solarium\nRENTAL DETAILS\nrent: 2000\nestimated utilities: 10\nfurnished: no\nPROPERTY DETAILS\n================\nsquare footage: 20\nbedrooms: 1\nbathrooms: 2\n\nAPARTMENT DETAILS\nlaundry: ensuite\nhas balcony : no\nPURCHASE DETAILS\nselling price: 20000\nestimated taxes: 10\n'
 r2 = 'PROPERTY DETAILS\n================\nsquare footage: 20sq\nbedrooms: 20b\nbathrooms: 20ba\n\nHOUSE DETAILS\n# of stories: 20\ngarage: none\nfenced yard: yes\nRENTAL DETAILS\nrent: 200\nestimated utilities: 20\nfurnished: no\n'
 r3 = 'PROPERTY DETAILS\n================\nsquare footage: 200\nbedrooms: 1\nbathrooms: 20\n\nHOUSE DETAILS\n# of stories: 20\ngarage: none\nfenced yard: no\nPURCHASE DETAILS\nselling price: 10\nestimated taxes: 20\n'
